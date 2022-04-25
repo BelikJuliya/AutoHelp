@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+<!--    <fragment-->
+<!--        android:id="@+id/characterListFragment"-->
+<!--        android:name="android.example.testappyarus.presentation.characterFlow.list.CharacterListFragment"-->
+<!--        android:label="CharacterListFragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_characterListFragment_to_characterDetailsFragment"-->
+<!--            app:destination="@id/characterDetailsFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/characterDetailsFragment"-->
+<!--        android:name="android.example.testappyarus.presentation.characterFlow.details.CharacterDetailsFragment"-->
+<!--        android:label="CharacterDetailsFragment">-->
+<!--        <argument-->
+<!--            android:name="characterId"-->
+<!--            app:argType="integer" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/locationListFragment"-->
+<!--        android:name="android.example.testappyarus.presentation.locationFlow.list.LocationListFragment"-->
+<!--        android:label="LocationListFragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_locationListFragment_to_locationDetailsFragment"-->
+<!--            app:destination="@id/locationDetailsFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/locationDetailsFragment"-->
+<!--        android:name="android.example.testappyarus.presentation.locationFlow.details.LocationDetailsFragment"-->
+<!--        android:label="LocationDetailsFragment">-->
+<!--        <argument-->
+<!--            android:name="characterId"-->
+<!--            app:argType="integer" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/episodesListFragment"-->
+<!--        android:name="android.example.testappyarus.presentation.episodesFlow.list.EpisodesListFragment"-->
+<!--        android:label="EpisodesListFragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_episodesListFragment_to_episodeDetailsFragment"-->
+<!--            app:destination="@id/episodeDetailsFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/episodeDetailsFragment"-->
+<!--        android:name="android.example.testappyarus.presentation.episodesFlow.details.EpisodeDetailsFragment"-->
+<!--        android:label="EpisodeDetailsFragment">-->
+<!--        <argument-->
+<!--            android:name="characterId"-->
+<!--            app:argType="integer" />-->
+<!--    </fragment>-->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="android.example.autohelp.presentation.MainFragment"
+        android:label="MainFragment" />
+</navigation>

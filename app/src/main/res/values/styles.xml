@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle.Regular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/gerbera_regular</item>
+    </style>
+
+    <!-- NewMainDark-->
+    <style name="TextStyle.Regular.MainDark">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.Regular.MainDark.13sp">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextStyle.Regular.MainDark.16sp">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="TextStyle.Regular.MainDark.18sp">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="TextStyle.Regular.MainDark.34sp">
+        <item name="android:textSize">34dp</item>
+    </style>
+
+    <!-- PINK -->
+    <!--    <style name="TextStyle.Regular.Pink">-->
+    <!--        <item name="android:textColor">@color/debt_text_color</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="TextStyle.Regular.Pink.16dp">-->
+    <!--        <item name="android:textSize">16dp</item>-->
+    <!--    </style>-->
+
+</resources>

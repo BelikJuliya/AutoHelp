@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <Transition-->
+<!--        app:constraintSetEnd="@id/collapsed"-->
+<!--        app:constraintSetStart="@id/expanded">-->
+
+<!--        <OnSwipe-->
+<!--            app:dragDirection="dragUp"-->
+<!--            app:touchAnchorId="@id/rv_main"-->
+<!--            app:touchAnchorSide="top" />-->
+
+<!--    </Transition>-->
+
+    <!--    <ConstraintSet android:id="@+id/expanded">-->
+    <!--        <Constraint-->
+    <!--            android:id="@+id/guideline"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintGuide_begin="@dimen/default_appbar_height"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+    <!--        <Constraint-->
+    <!--            android:id="@id/title"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="44dp"-->
+    <!--            android:layout_marginStart="16dp"-->
+    <!--            android:layout_marginBottom="10dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/description"-->
+    <!--            app:layout_constraintEnd_toStartOf="@id/calendarButton"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="@null">-->
+    <!--            <CustomAttribute-->
+    <!--                app:attributeName="textSize"-->
+    <!--                app:customFloatValue="30" />-->
+    <!--        </Constraint>-->
+    <!--        <Constraint-->
+    <!--            android:id="@id/description"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="16dp"-->
+    <!--            android:layout_marginBottom="12dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/trial_slider"-->
+    <!--            app:layout_constraintEnd_toStartOf="@id/calendarButton"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_goneMarginBottom="4dp"-->
+    <!--            app:visibilityMode="ignore" />-->
+
+    <!--        <Constraint-->
+    <!--            android:id="@id/therapyRecyclerView"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_gravity="fill_vertical"-->
+    <!--            android:clipToPadding="false"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:paddingTop="14dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/proposalContainer"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/guideline"-->
+    <!--            app:visibilityMode="ignore" />-->
+
+    <!--    </ConstraintSet>-->
+
+    <!--    <ConstraintSet android:id="@+id/collapsed">-->
+
+    <!--        <Constraint-->
+    <!--            android:id="@id/title"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="28dp"-->
+    <!--            android:layout_marginStart="16dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/description"-->
+    <!--            app:layout_constraintEnd_toStartOf="@id/calendarButton"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="@null">-->
+    <!--            <CustomAttribute-->
+    <!--                app:attributeName="textSize"-->
+    <!--                app:customFloatValue="20" />-->
+    <!--        </Constraint>-->
+    <!--        <Constraint-->
+    <!--            android:id="@id/description"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="16dp"-->
+    <!--            android:layout_marginBottom="4dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/trial_slider"-->
+    <!--            app:layout_constraintEnd_toStartOf="@id/calendarButton"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_goneMarginBottom="6dp"-->
+    <!--            app:visibilityMode="ignore" />-->
+
+    <!--        <Constraint-->
+    <!--            android:id="@id/rv_main"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_gravity="fill_vertical"-->
+    <!--            android:clipToPadding="false"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:paddingTop="14dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/proposalContainer"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/guideline"-->
+    <!--            app:visibilityMode="ignore" />-->
+
+    <!--    </ConstraintSet>-->
+</MotionScene>
