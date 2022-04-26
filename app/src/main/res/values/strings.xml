@@ -2,4 +2,8 @@
     <string name="app_name">AutoHelp</string>
     <string name="logo">Сеть 112.рф</string>
     <string name="toolbar_title">Cистема взаимопомощи автолюбителей</string>
+    <string name="choose_event_type">Выберите тип события</string>
+    <string name="inform_driver">Сообщите водителю о событии!</string>
+    <string name="parking_title">Вам мешает\nмой автомобиль</string>
+    <string name="evacuation_title">Мой автомобиль\nэвакуируют</string>
 </resources>

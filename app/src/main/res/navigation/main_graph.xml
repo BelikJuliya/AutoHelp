@@ -54,6 +54,6 @@
 <!--    </fragment>-->
     <fragment
         android:id="@+id/mainFragment"
-        android:name="android.example.autohelp.presentation.MainFragment"
+        android:name="android.example.autohelp.presentation.main.MainFragment"
         android:label="MainFragment" />
 </navigation>

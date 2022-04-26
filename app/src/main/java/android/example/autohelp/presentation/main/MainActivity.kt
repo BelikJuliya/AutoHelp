@@ -1,5 +1,6 @@
-package android.example.autohelp
+package android.example.autohelp.presentation.main
 
+import android.example.autohelp.R
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
