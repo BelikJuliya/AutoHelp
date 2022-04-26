@@ -69,6 +69,10 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.38.1"
     kapt "com.google.dagger:hilt-compiler:2.38.1"
 
+    implementation 'com.redmadrobot:input-mask-android:6.0.0'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
+
 //    implementation 'com.github.RedMadRobot:input-mask-android:6.1.0'
 //    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.10'
 //    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"

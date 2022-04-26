@@ -29,7 +29,6 @@ class MainScreenViewModel @Inject constructor(
         )
     }
 
-
     fun handleEventTypeSelection(model: Event) {
         val newEventList = eventList.map {
             if (it is Event) {
@@ -48,4 +47,15 @@ class MainScreenViewModel @Inject constructor(
         }.toMutableList()
         selectedEventType = model
     }
+
+    fun confirmPhone(phoneNumber: String): Boolean {
+        if (!isPhoneValid(phoneNumber)) return false
+        else {
+            // TODO send to backend
+            return true
+        }
+    }
+
+    private fun isPhoneValid(phoneNumber: String) =
+        (phoneNumber.replace("[-+ ()]".toRegex(), "")).length == 11
 }

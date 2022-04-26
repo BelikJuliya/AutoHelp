@@ -9,5 +9,7 @@
     <string name="your_phone_title">Ваш телефон</string>
     <string name="confirm_phone">Подтвердить номер</string>
     <string name="phone_hint">Номер телефона</string>
+    <string name="phone_error">Введите корректный номер</string>
+    <string name="phone_number_hint">+7 (831) 123-45-67</string>
     <string name="_7">+7</string>
 </resources>

@@ -23,6 +23,12 @@ class MainFragment : BaseFragment() {
         MainScreenAdapter(
             select = {
                 viewModel.handleEventTypeSelection(it)
+            },
+            confirm = {
+                viewModel.confirmPhone(it)
+            },
+            handlePhoneInputChange = {
+
             }
         )
     }
