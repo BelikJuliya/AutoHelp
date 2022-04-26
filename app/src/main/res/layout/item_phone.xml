@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_your_mobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/your_phone_title"
+        android:textColor="@color/main_dark"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_country_code"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/bg_grey_corners_9"
+        android:drawablePadding="14dp"
+        android:gravity="center"
+        android:padding="14dp"
+        android:text="@string/_7"
+        app:drawableEndCompat="@drawable/ic_arrow_down_grey"
+        app:layout_constraintBottom_toBottomOf="@id/til_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/til_phone" />
+
+    <View
+        android:id="@+id/view_country_pick"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/tv_country_code"
+        app:layout_constraintEnd_toEndOf="@id/tv_country_code"
+        app:layout_constraintStart_toStartOf="@id/tv_country_code"
+        app:layout_constraintTop_toTopOf="@id/tv_country_code" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_grey_corners_9"
+        android:textColorHint="@color/transparentWhiteSix80"
+        app:boxBackgroundMode="none"
+        app:errorEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_country_code"
+        app:layout_constraintTop_toBottomOf="@id/tv_your_mobile"
+        app:passwordToggleDrawable="@null"
+        app:passwordToggleEnabled="false">
+
+        <EditText
+            android:id="@+id/et_phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:digits="0123456789 -.+()"
+            android:hint="@string/phone_hint"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="13sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_yellow_corners_9"
+        android:text="@string/confirm_phone"
+        android:textColor="@color/main_dark"
+        android:textSize="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_phone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

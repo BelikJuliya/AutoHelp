@@ -1,29 +1,28 @@
-package android.example.autohelp.domain.main
+package android.example.autohelp.domain.main.phone
 
 import android.example.autohelp.presentation.base.BaseModel
-import android.example.autohelp.presentation.base.EventType
 import android.example.autohelp.presentation.base.PostModelPayload
 
-data class EventTypesList(
-    val eventList: MutableList<BaseModel>
+data class Phone(
+    val phoneNumber: String? = null
 ) : BaseModel {
 
     override fun isIdDiff(other: BaseModel): Boolean {
-        return other is EventTypesList
+        return other is Phone
     }
 
     override fun isContentDiff(other: BaseModel): Boolean {
-        if (other !is EventTypesList) return false
-        if (other.eventList != this.eventList) return false
+        if (other !is Phone) return false
+        if (other.phoneNumber != this.phoneNumber) return false
         return true
     }
 
     override fun getPayloadDiff(other: BaseModel): MutableList<Any> {
         val payloads = mutableListOf<Any>()
-        if (other !is EventTypesList)
+        if (other !is Phone)
             return payloads
-        if (other.eventList != this.eventList)
-            payloads.add(PostModelPayload.EVENT_LIST)
+        if (other.phoneNumber != this.phoneNumber)
+            payloads.add(PostModelPayload.PHONE_NUMBER)
         return payloads
     }
 }

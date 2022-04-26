@@ -1,6 +1,6 @@
-package android.example.autohelp.presentation.main
+package android.example.autohelp.presentation.main.event
 
-import android.example.autohelp.domain.main.Event
+import android.example.autohelp.domain.main.event.Event
 import android.example.autohelp.presentation.base.BaseRecyclerAdapter
 
 class EventTypeAdapter(

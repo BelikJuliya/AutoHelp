@@ -1,8 +1,8 @@
-package android.example.autohelp.presentation.main
+package android.example.autohelp.presentation.main.event
 
 import android.example.autohelp.R
 import android.example.autohelp.databinding.ItemEventBinding
-import android.example.autohelp.domain.main.Event
+import android.example.autohelp.domain.main.event.Event
 import android.example.autohelp.presentation.base.AdapterDelegate
 import android.example.autohelp.presentation.base.BaseModel
 import android.example.autohelp.presentation.base.BaseViewHolder
@@ -21,21 +21,9 @@ class EventViewHolder(
         binding = ItemEventBinding.bind(itemView)
         with(binding) {
             model as Event
-            ivIcon.setImageResource(model.iconRes)
-            tvTitle.text = itemView.resources.getString(model.titleRes)
-            if (model.isSelected) {
-                ivIcon.setColorFilter(
-                    ContextCompat.getColor(itemView.context, R.color.main_yellow),
-                    android.graphics.PorterDuff.Mode.MULTIPLY
-                )
-                clFrame.background = ContextCompat.getDrawable(itemView.context, R.drawable.bg_event_type_selected)
-            } else {
-                ivIcon.setColorFilter(
-                    ContextCompat.getColor(itemView.context, R.color.main_dark),
-                    android.graphics.PorterDuff.Mode.MULTIPLY
-                )
-                clFrame.background = ContextCompat.getDrawable(itemView.context, R.drawable.bg_white_corners_9)
-            }
+            bindIcon(model)
+            bindTitle(model)
+            bindIsSelected(model)
             root.setOnClickListener {
                 selectEventType(model)
             }
@@ -61,15 +49,21 @@ class EventViewHolder(
         with(binding) {
             if (model.isSelected) {
                 ivIcon.setColorFilter(
-                    ContextCompat.getColor(itemView.context, R.color.main_yellow),
-                    android.graphics.PorterDuff.Mode.MULTIPLY
+                    ContextCompat.getColor(
+                        itemView.context,
+                        R.color.main_yellow
+                    )
                 )
+                tvTitle.setTextColor(ContextCompat.getColor(itemView.context, R.color.main_yellow))
                 clFrame.background = ContextCompat.getDrawable(itemView.context, R.drawable.bg_event_type_selected)
             } else {
                 ivIcon.setColorFilter(
-                    ContextCompat.getColor(itemView.context, R.color.main_dark),
-                    android.graphics.PorterDuff.Mode.MULTIPLY
+                    ContextCompat.getColor(
+                        itemView.context,
+                        R.color.main_dark
+                    )
                 )
+                tvTitle.setTextColor(ContextCompat.getColor(itemView.context, R.color.main_dark))
                 clFrame.background = ContextCompat.getDrawable(itemView.context, R.drawable.bg_white_corners_9)
             }
         }

@@ -10,4 +10,10 @@
 
     <color name="main_yellow">#FBBA00</color>
     <color name="main_dark">#3E3A36</color>
+    <color name="transparentWhiteSix80">#80ffffff</color>
+    <color name="grey_light">#F0F0F0</color>
+    <color name="textGray">#A2ACB6</color>
+    <color name="transparent">#00FFFFFF</color>
+
+
 </resources>

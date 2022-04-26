@@ -1,4 +1,4 @@
-package android.example.autohelp.domain.main
+package android.example.autohelp.domain.main.event
 
 import android.example.autohelp.presentation.base.BaseModel
 import android.example.autohelp.presentation.base.PostModelPayload

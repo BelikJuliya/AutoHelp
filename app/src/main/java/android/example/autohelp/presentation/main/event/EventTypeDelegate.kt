@@ -1,9 +1,9 @@
-package android.example.autohelp.presentation.main
+package android.example.autohelp.presentation.main.event
 
 import android.example.autohelp.R
 import android.example.autohelp.databinding.ItemEventTypeBinding
-import android.example.autohelp.domain.main.Event
-import android.example.autohelp.domain.main.EventTypesList
+import android.example.autohelp.domain.main.event.Event
+import android.example.autohelp.domain.main.event.EventTypesList
 import android.example.autohelp.presentation.base.AdapterDelegate
 import android.example.autohelp.presentation.base.BaseModel
 import android.example.autohelp.presentation.base.BaseViewHolder
@@ -32,7 +32,6 @@ class EventTypeViewHolder(
         binding = ItemEventTypeBinding.bind(itemView)
         with(binding) {
             model as EventTypesList
-            rvEventType.layoutManager = GridLayoutManager(root.context, 1)
             (rvEventType.itemAnimator as SimpleItemAnimator?)?.supportsChangeAnimations = false
             if (rvEventType.adapter == null)
                 rvEventType.adapter = eventTypeAdapter
@@ -43,7 +42,6 @@ class EventTypeViewHolder(
     private fun bindItems(model: BaseModel) {
         model as EventTypesList
         with(binding) {
-            rvEventType.layoutManager = LinearLayoutManager(root.context)
             (rvEventType.itemAnimator as SimpleItemAnimator?)?.supportsChangeAnimations = false
             if (rvEventType.adapter == null)
                 rvEventType.adapter = eventTypeAdapter
