@@ -28,8 +28,8 @@ class MainFragment : BaseFragment() {
             confirm = {
                 viewModel.confirmPhone(it)
             },
-            handlePhoneInputChange = {
-
+            handleVehicleType = {
+                viewModel.handleVehicleType(it)
             }
         )
     }

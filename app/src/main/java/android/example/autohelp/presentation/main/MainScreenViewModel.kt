@@ -1,10 +1,12 @@
 package android.example.autohelp.presentation.main
 
 import android.example.autohelp.R
+import android.example.autohelp.domain.main.Car
 import android.example.autohelp.domain.main.event.Event
 import android.example.autohelp.domain.main.event.EventTypesList
 import android.example.autohelp.domain.main.phone.Phone
 import android.example.autohelp.presentation.base.BaseModel
+import android.example.autohelp.presentation.base.VehicleType
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,6 +19,8 @@ class MainScreenViewModel @Inject constructor(
     val itemList = MutableLiveData<MutableList<BaseModel>>()
     private val eventList = mutableListOf<BaseModel>()
     private var selectedEventType: Event? = null
+    private var selectedVehicleType: VehicleType = VehicleType.AUTO
+    private lateinit var phoneNumber: String
 
     fun populateList() {
         itemList.value = mutableListOf(
@@ -25,8 +29,13 @@ class MainScreenViewModel @Inject constructor(
                 add(Event(R.string.evacuation_title, R.drawable.ic_evacuation))
                 // TODO add road accident event
             }),
-            Phone()
+            Phone(),
+            Car()
         )
+    }
+
+    fun handleVehicleType(vehicleType: VehicleType) {
+        selectedVehicleType = vehicleType
     }
 
     fun handleEventTypeSelection(model: Event) {
@@ -58,4 +67,6 @@ class MainScreenViewModel @Inject constructor(
 
     private fun isPhoneValid(phoneNumber: String) =
         (phoneNumber.replace("[-+ ()]".toRegex(), "")).length == 11
+
+
 }

@@ -12,4 +12,12 @@
     <string name="phone_error">Введите корректный номер</string>
     <string name="phone_number_hint">+7 (831) 123-45-67</string>
     <string name="_7">+7</string>
+    <string name="culprit_car_number">Гос. номер виновника</string>
+    <string name="auto">АВТО</string>
+    <string name="moto">МОТО</string>
+    <string name="car_number_letter_hint_first">T</string>
+    <string name="car_number_hint">123</string>
+    <string name="car_number_letter_hint_last">TТ</string>
+    <string name="car_number_region_hint">52</string>
+
 </resources>

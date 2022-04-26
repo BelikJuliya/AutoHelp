@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp">
+
+    <TextView
+        android:id="@+id/tv_car_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/culprit_car_number"
+        android:textColor="@color/main_dark"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_car_number">
+
+        <RadioButton
+            android:id="@+id/rb_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/main_yellow"
+            android:checked="true"
+            android:text="@string/auto"
+            android:textColor="@color/main_dark"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/rb_moto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/grey_1"
+            android:text="@string/moto"
+            android:textColor="@color/grey_2"
+            android:textSize="11sp" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view_frame_first_letter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_grey_corners_9"
+        app:layout_constraintBottom_toBottomOf="@id/et_first_letter"
+        app:layout_constraintEnd_toEndOf="@id/et_first_letter"
+        app:layout_constraintStart_toStartOf="@id/et_first_letter"
+        app:layout_constraintTop_toTopOf="@id/et_first_letter" />
+
+    <EditText
+        android:id="@+id/et_first_letter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="@android:color/transparent"
+        android:digits="0123456789 -.+()"
+        android:hint="@string/car_number_letter_hint_first"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="9dp"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toEndOf="@id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@id/tv_car_number" />
+
+    <View
+        android:id="@+id/view_frame_car_number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_grey_corners_9"
+        app:layout_constraintBottom_toBottomOf="@id/et_car_number"
+        app:layout_constraintEnd_toEndOf="@id/et_car_number"
+        app:layout_constraintStart_toStartOf="@id/et_car_number"
+        app:layout_constraintTop_toTopOf="@id/et_car_number" />
+
+    <EditText
+        android:id="@+id/et_car_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@android:color/transparent"
+        android:digits="0123456789 -.+()"
+        android:hint="@string/car_number_hint"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="9dp"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_first_letter"
+        app:layout_constraintStart_toEndOf="@id/et_first_letter"
+        app:layout_constraintTop_toTopOf="@id/et_first_letter" />
+
+    <View
+        android:id="@+id/view_frame_last_letters"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_grey_corners_9"
+        app:layout_constraintBottom_toBottomOf="@id/et_last_letters"
+        app:layout_constraintEnd_toEndOf="@id/et_last_letters"
+        app:layout_constraintStart_toStartOf="@id/et_last_letters"
+        app:layout_constraintTop_toTopOf="@id/et_last_letters" />
+
+    <EditText
+        android:id="@+id/et_last_letters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@android:color/transparent"
+        android:digits="0123456789 -.+()"
+        android:hint="@string/car_number_letter_hint_last"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="9dp"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_frame_car_number"
+        app:layout_constraintStart_toEndOf="@id/view_frame_car_number"
+        app:layout_constraintTop_toTopOf="@id/view_frame_car_number" />
+
+    <View
+        android:id="@+id/view_frame_region"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_grey_corners_9"
+        app:layout_constraintBottom_toBottomOf="@id/et_car_region"
+        app:layout_constraintEnd_toEndOf="@id/et_car_region"
+        app:layout_constraintStart_toStartOf="@id/et_car_region"
+        app:layout_constraintTop_toTopOf="@id/et_car_region" />
+
+    <EditText
+        android:id="@+id/et_car_region"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@android:color/transparent"
+        android:digits="0123456789 -.+()"
+        android:hint="@string/car_number_region_hint"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="9dp"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_frame_last_letters"
+        app:layout_constraintStart_toEndOf="@id/view_frame_last_letters"
+        app:layout_constraintTop_toTopOf="@id/view_frame_last_letters" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
