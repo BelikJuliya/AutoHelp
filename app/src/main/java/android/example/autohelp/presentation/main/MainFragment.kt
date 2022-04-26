@@ -1,6 +1,7 @@
 package android.example.autohelp.presentation.main
 
 import android.example.autohelp.R
+import android.example.autohelp.databinding.FragmentMainBinding
 import android.example.autohelp.databinding.FragmentMainNewBinding
 import android.example.autohelp.presentation.base.BaseFragment
 import android.example.autohelp.presentation.base.viewBinding
@@ -15,9 +16,9 @@ class MainFragment : BaseFragment() {
 
     private val viewModel by viewModels<MainScreenViewModel>()
 
-    override val binding by viewBinding { FragmentMainNewBinding.bind(bindingCreate()) }
+    override val binding by viewBinding { FragmentMainBinding.bind(bindingCreate()) }
 
-    override fun getLayoutId(): Int = R.layout.fragment_main_new
+    override fun getLayoutId(): Int = R.layout.fragment_main
 
     private val mainScreenAdapter by lazy {
         MainScreenAdapter(
