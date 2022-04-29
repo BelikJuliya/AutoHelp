@@ -19,5 +19,7 @@
     <string name="car_number_hint">123</string>
     <string name="car_number_letter_hint_last">TТ</string>
     <string name="car_number_region_hint">52</string>
+    <string name="describe_situation">Опишите ситуацию</string>
+    <string name="remained_attempts">На этот номер отправлено SMS с кодом.\nСрок действия кода: 3 мин. Число попыток: %s</string>
 
 </resources>

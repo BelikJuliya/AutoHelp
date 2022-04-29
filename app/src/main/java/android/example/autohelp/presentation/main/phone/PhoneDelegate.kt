@@ -9,6 +9,7 @@ import android.example.autohelp.presentation.base.BaseViewHolder
 import android.example.autohelp.presentation.base.PostModelPayload
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.view.ViewGroup
 import com.redmadrobot.inputmask.MaskedTextChangedListener
 
@@ -48,15 +49,11 @@ class PhoneViewHolder(
             btnConfirm.setOnClickListener {
                 if (!confirm(etPhoneInput.text.toString())) {
                     etPhoneInput.error = itemView.resources.getString(R.string.phone_error)
+                } else {
+                    tvAttempts.visibility = View.VISIBLE
+                    tvSmsCode.visibility = View.VISIBLE
                 }
             }
-
-//        when (country.phoneLengths.maxOrNull()) {
-//            7 -> maskListener.primaryFormat = "[000]-[00]-[00]"
-//            8 -> maskListener.primaryFormat = "[00]-[00]-[00]-[00]"
-//            9 -> maskListener.primaryFormat = "[000]-[000]-[000]"
-//            else -> maskListener.primaryFormat = "([000]) [000]-[00]-[00]"
-//        }
         }
     }
 
