@@ -13,12 +13,13 @@ class MainScreenAdapter(
     confirm: (phone: String) -> Boolean = { false },
     handlePhoneInputChange: (phone: Phone) -> Unit = {},
     handleCarNumber: (carNumber: String) -> Unit = {},
-    handleVehicleType: (vehicleType: VehicleType) -> Unit = {}
-
+    handleVehicleType: (vehicleType: VehicleType) -> Unit = {},
+    notify: () -> Unit = {},
 ) : BaseRecyclerAdapter(
     listOf(
         EventTypeDelegate(select),
         PhoneDelegate(confirm, handlePhoneInputChange),
-        CarNumberDelegate(handleCarNumber, handleVehicleType)
+        CarNumberDelegate(handleCarNumber, handleVehicleType),
+        NotifyDelegate(notify)
     )
 )

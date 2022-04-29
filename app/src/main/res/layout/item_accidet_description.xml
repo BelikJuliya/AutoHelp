@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginHorizontal="24dp">
 
     <TextView
@@ -33,22 +34,67 @@
     <EditText
         android:id="@+id/et_first_letter"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
-        android:digits="0123456789 -.+()"
-        android:hint="@string/car_number_letter_hint_first"
+        android:gravity="top"
+        android:hint="@string/describe_situation"
         android:imeOptions="actionDone"
         android:inputType="text"
         android:lines="1"
-        android:maxLines="1"
+        android:maxLines="20"
         android:paddingHorizontal="12dp"
         android:paddingVertical="9dp"
         android:textAllCaps="true"
         android:textSize="13sp"
+        app:layout_constraintDimensionRatio="2:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_car_number" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_videos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_first_letter"
+        app:listitem="@layout/item_video"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_video" />
+
+    <TextView
+        android:id="@+id/tv_record_video"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_grey_solid"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="16dp"
+        android:text="@string/record_video"
+        android:textColor="@color/main_dark"
+        android:textSize="11sp"
+        app:drawableStartCompat="@drawable/ic_record"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_videos" />
+
+    <TextView
+        android:id="@+id/tv_upload_video"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="16dp"
+        android:text="@string/upload_video"
+        android:textColor="@color/main_dark"
+        android:textSize="11sp"
+        app:drawableStartCompat="@drawable/ic_upload"
+        app:layout_constraintBottom_toBottomOf="@id/tv_record_video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_record_video" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

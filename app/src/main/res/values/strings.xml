@@ -21,5 +21,8 @@
     <string name="car_number_region_hint">52</string>
     <string name="describe_situation">Опишите ситуацию</string>
     <string name="remained_attempts">На этот номер отправлено SMS с кодом.\nСрок действия кода: 3 мин. Число попыток: %s</string>
+    <string name="record_video">Записать видео</string>
+    <string name="upload_video">Загрузить видео</string>
+    <string name="notify">Уведомить</string>
 
 </resources>
