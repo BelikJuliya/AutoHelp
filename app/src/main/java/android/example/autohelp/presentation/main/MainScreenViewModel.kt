@@ -1,10 +1,12 @@
 package android.example.autohelp.presentation.main
 
 import android.example.autohelp.R
+import android.example.autohelp.domain.Empty
 import android.example.autohelp.domain.main.Car
 import android.example.autohelp.domain.main.event.Event
 import android.example.autohelp.domain.main.event.EventTypesList
 import android.example.autohelp.domain.main.phone.Phone
+import android.example.autohelp.domain.video.AccidentDescription
 import android.example.autohelp.presentation.base.BaseModel
 import android.example.autohelp.presentation.base.VehicleType
 import androidx.lifecycle.MutableLiveData
@@ -27,10 +29,12 @@ class MainScreenViewModel @Inject constructor(
             EventTypesList(eventList.apply {
                 add(Event(R.string.parking_title, R.drawable.ic_parking))
                 add(Event(R.string.evacuation_title, R.drawable.ic_evacuation))
-                // TODO add road accident event
+                add(Event(R.string.road_accident_title, R.drawable.ic_road_accident))
             }),
             Phone(),
-            Car()
+            Car(),
+            AccidentDescription(mutableListOf(), ""),
+            Empty()
         )
     }
 

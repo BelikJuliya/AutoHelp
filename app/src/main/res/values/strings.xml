@@ -6,6 +6,7 @@
     <string name="inform_driver">Сообщите водителю о событии!</string>
     <string name="parking_title">Вам мешает\nмой автомобиль</string>
     <string name="evacuation_title">Мой автомобиль\nэвакуируют</string>
+    <string name="road_accident_title">Мой автомобиль\nпопал в ДТП</string>
     <string name="your_phone_title">Ваш телефон</string>
     <string name="confirm_phone">Подтвердить номер</string>
     <string name="phone_hint">Номер телефона</string>

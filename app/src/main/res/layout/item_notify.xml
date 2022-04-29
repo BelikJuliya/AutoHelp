@@ -12,6 +12,7 @@
         android:background="@drawable/bg_dark_yellow_corners_9"
         android:gravity="center"
         android:paddingVertical="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/notify"
         android:textAllCaps="true"
         android:textStyle="bold"
