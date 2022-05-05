@@ -18,13 +18,14 @@ class MainScreenAdapter(
     handleVehicleType: (vehicleType: VehicleType) -> Unit = {},
     notify: () -> Unit = {},
     upload: (video: Video) -> Unit = {},
-    delete: (video: Video) -> Unit = {}
+    delete: (video: Video) -> Unit = {},
+    recordVideo: () -> Unit = {}
 ) : BaseRecyclerAdapter(
     listOf(
         EventTypeDelegate(select),
         PhoneDelegate(confirm, handlePhoneInputChange),
         CarNumberDelegate(handleCarNumber, handleVehicleType),
         NotifyDelegate(notify),
-        UploadFilesDelegate(upload, delete)
+        UploadFilesDelegate(upload, delete, recordVideo)
     )
 )

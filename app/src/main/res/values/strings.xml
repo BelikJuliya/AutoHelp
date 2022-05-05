@@ -25,5 +25,7 @@
     <string name="record_video">Записать видео</string>
     <string name="upload_video">Загрузить видео</string>
     <string name="notify">Уведомить</string>
+    <string name="phone_approved">Теперь Вы можете отправить уведомления</string>
+    <string name="enter_correct_number">Введите корректный номер</string>
 
 </resources>

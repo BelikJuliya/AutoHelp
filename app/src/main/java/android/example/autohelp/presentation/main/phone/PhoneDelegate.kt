@@ -7,6 +7,7 @@ import android.example.autohelp.presentation.base.AdapterDelegate
 import android.example.autohelp.presentation.base.BaseModel
 import android.example.autohelp.presentation.base.BaseViewHolder
 import android.example.autohelp.presentation.base.PostModelPayload
+import android.example.autohelp.visible
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
@@ -46,10 +47,19 @@ class PhoneViewHolder(
             }
             etPhoneInput.addTextChangedListener(textWatcher)
 
+            if (model.isConfirmed) {
+                tvPhoneApproved.text = itemView.resources.getString(R.string.phone_approved)
+                btnConfirm.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_approved, 0, 0, 0);
+            } else {
+                btnConfirm.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+            }
+            tvPhoneApproved.visible(model.isConfirmed)
+
             btnConfirm.setOnClickListener {
                 if (!confirm(etPhoneInput.text.toString())) {
                     etPhoneInput.error = itemView.resources.getString(R.string.phone_error)
                 } else {
+//                    tvPhoneApproved.text = itemView.resources.getString(R.string.phone_error)
                     tvAttempts.visibility = View.VISIBLE
                     tvSmsCode.visibility = View.VISIBLE
                 }
@@ -57,9 +67,22 @@ class PhoneViewHolder(
         }
     }
 
-    private fun bindPhone(model: BaseModel) {
+//    private fun bindPhone(model: BaseModel) {
+//        model as Phone
+//        with(binding) {
+//        }
+//    }
+
+    private fun bindConfirmed(model: BaseModel) {
         model as Phone
         with(binding) {
+            if (model.isConfirmed) {
+                tvPhoneApproved.text = itemView.resources.getString(R.string.phone_approved)
+                btnConfirm.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_approved, 0, 0, 0)
+            } else {
+                btnConfirm.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
+            }
+            tvPhoneApproved.visible(model.isConfirmed)
         }
     }
 
@@ -70,7 +93,7 @@ class PhoneViewHolder(
     ) {
         payloads.forEach {
             when (it) {
-                PostModelPayload.PHONE_NUMBER -> bindPhone(model)
+                PostModelPayload.CONFIRMED -> bindConfirmed(model)
             }
         }
     }

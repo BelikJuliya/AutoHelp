@@ -5,6 +5,7 @@ import android.example.autohelp.presentation.base.BaseRecyclerAdapter
 
 class VideoAdapter(
     delete: (video: Video) -> Unit = {},
+    recordVideo: () -> Unit = {},
 ) : BaseRecyclerAdapter(
     listOf(
         VideoDelegate(delete)

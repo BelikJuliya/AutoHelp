@@ -14,7 +14,8 @@ import androidx.recyclerview.widget.SimpleItemAnimator
 class UploadFilesViewHolder(
     val parent: ViewGroup,
     private val upload: (video: Video) -> Unit = {},
-    private val delete: (video: Video) -> Unit = {}
+    private val delete: (video: Video) -> Unit = {},
+    private val recordVideo: () -> Unit = {}
 ) : BaseViewHolder(parent, R.layout.item_accidet_description) {
 
     private lateinit var binding: ItemAccidetDescriptionBinding
@@ -36,7 +37,9 @@ class UploadFilesViewHolder(
                 rvVideos.adapter = videoAdapter
             videoAdapter.submitList(model.videoList)
 
-            //tvUploadVideo.setOnClickListener { upload(model) }
+            tvRecordVideo.setOnClickListener { recordVideo() }
+
+//            tvUploadVideo.setOnClickListener { upload(model) }
         }
     }
 
@@ -73,14 +76,16 @@ class UploadFilesViewHolder(
 
 class UploadFilesDelegate(
     private val upload: (video: Video) -> Unit = {},
-    private val delete: (video: Video) -> Unit = {}
+    private val delete: (video: Video) -> Unit = {},
+    private val recordVideo: () -> Unit = {}
 ) : AdapterDelegate {
 
     override fun onCreateViewHolder(parent: ViewGroup): BaseViewHolder =
         UploadFilesViewHolder(
             parent,
             upload,
-            delete
+            delete,
+            recordVideo
         )
 
     override fun isValidType(baseModel: BaseModel): Boolean = baseModel is AccidentDescription

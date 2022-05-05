@@ -4,7 +4,8 @@ import android.example.autohelp.presentation.base.BaseModel
 import android.example.autohelp.presentation.base.PostModelPayload
 
 data class Phone(
-    var phoneNumber: String? = null
+    var phoneNumber: String? = null,
+    val isConfirmed: Boolean = false
 ) : BaseModel {
 
     override fun isIdDiff(other: BaseModel): Boolean {

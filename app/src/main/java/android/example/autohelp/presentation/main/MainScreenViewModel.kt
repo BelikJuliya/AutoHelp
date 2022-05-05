@@ -12,6 +12,7 @@ import android.example.autohelp.presentation.base.VehicleType
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import java.io.File
 import javax.inject.Inject
 
 @HiltViewModel
@@ -20,6 +21,7 @@ class MainScreenViewModel @Inject constructor(
 
     val itemList = MutableLiveData<MutableList<BaseModel>>()
     private val eventList = mutableListOf<BaseModel>()
+    val videoList = mutableListOf<File>()
     private var selectedEventType: Event? = null
     private var selectedVehicleType: VehicleType = VehicleType.AUTO
     private lateinit var phoneNumber: String
