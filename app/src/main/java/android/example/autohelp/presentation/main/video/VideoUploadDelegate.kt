@@ -49,16 +49,17 @@ class UploadFilesViewHolder(
             (rvVideos.itemAnimator as SimpleItemAnimator?)?.supportsChangeAnimations = false
             if (rvVideos.adapter == null)
                 rvVideos.adapter = videoAdapter
+            // TODO remove after bug fixing in mapping
             videoAdapter.submitList(model.videoList)
         }
     }
 
-    private fun bindDescription(model: BaseModel) {
-        model as AccidentDescription
-        with(binding) {
-            etDescription.setText(model.description)
-        }
-    }
+//    private fun bindDescription(model: BaseModel) {
+//        model as AccidentDescription
+//        with(binding) {
+//            etDescription.setText(model.description)
+//        }
+//    }
 
     override fun bindPayload(
         model: BaseModel,
@@ -68,7 +69,7 @@ class UploadFilesViewHolder(
         payloads.forEach {
             when (it) {
                 PostModelPayload.VIDEO_LIST -> bindItems(model)
-                PostModelPayload.DESCRIPTION -> bindDescription(model)
+//                PostModelPayload.DESCRIPTION -> bindDescription(model)
             }
         }
     }

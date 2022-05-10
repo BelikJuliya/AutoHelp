@@ -7,6 +7,7 @@ import android.example.autohelp.domain.main.event.Event
 import android.example.autohelp.domain.main.event.EventTypesList
 import android.example.autohelp.domain.main.phone.Phone
 import android.example.autohelp.domain.video.AccidentDescription
+import android.example.autohelp.domain.video.Video
 import android.example.autohelp.presentation.base.BaseModel
 import android.example.autohelp.presentation.base.VehicleType
 import androidx.lifecycle.MutableLiveData
@@ -21,7 +22,7 @@ class MainScreenViewModel @Inject constructor(
 
     val itemList = MutableLiveData<MutableList<BaseModel>>()
     private val eventList = mutableListOf<BaseModel>()
-    val videoList = mutableListOf<File>()
+    private val videos = mutableListOf<BaseModel>()
     private var selectedEventType: Event? = null
     private var selectedVehicleType: VehicleType = VehicleType.AUTO
     private lateinit var phoneNumber: String
@@ -35,13 +36,26 @@ class MainScreenViewModel @Inject constructor(
             }),
             Phone(),
             Car(),
-            AccidentDescription(mutableListOf(), ""),
+            AccidentDescription(mutableListOf()),
             Empty()
         )
     }
 
     fun handleVehicleType(vehicleType: VehicleType) {
         selectedVehicleType = vehicleType
+    }
+
+    fun handleVideo(path: String) {
+        val videoFile = File(path)
+        videos.add(Video(title = videoFile.name))
+        val newItems = itemList.value?.toMutableList() ?: mutableListOf()
+        val newVideoList = mutableListOf<BaseModel>()
+        newVideoList.addAll(videos)
+        itemList.value = newItems.map {
+            if (it is AccidentDescription) {
+                it.copy(videoList = newVideoList)
+            } else it
+        }.toMutableList()
     }
 
     fun handleEventTypeSelection(model: Event) {
@@ -61,6 +75,18 @@ class MainScreenViewModel @Inject constructor(
             } else it
         }.toMutableList()
         selectedEventType = model
+    }
+
+    fun deleteVideo(video: Video) {
+        videos.remove(video)
+        val newVideoList = mutableListOf<BaseModel>()
+        newVideoList.addAll(videos)
+        val newItems = itemList.value?.toMutableList() ?: mutableListOf()
+        itemList.value = newItems.map {
+            if (it is AccidentDescription) {
+                it.copy(videoList = newVideoList)
+            } else it
+        }.toMutableList()
     }
 
     fun confirmPhone(phoneNumber: String): Boolean {

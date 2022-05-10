@@ -32,7 +32,7 @@ class MainFragment : BaseFragment() {
 
     override fun getLayoutId(): Int = R.layout.fragment_main
 
-    protected val rxPermissions by lazy(LazyThreadSafetyMode.NONE) { RxPermissions(this) }
+    private val rxPermissions by lazy(LazyThreadSafetyMode.NONE) { RxPermissions(this) }
 
     private val mainScreenAdapter by lazy {
         MainScreenAdapter(
@@ -51,6 +51,9 @@ class MainFragment : BaseFragment() {
             recordVideo = {
                 checkStoragePermission()
                 // dispatchTakeVideoIntent()
+            },
+            delete = {
+                viewModel.deleteVideo(it)
             }
         )
     }
@@ -80,7 +83,7 @@ class MainFragment : BaseFragment() {
             val videoUri: Uri? = result.data?.data
             var realPath: String? = null
             videoUri?.let { realPath = getRealPathFromURIPath(it, requireContext()) }
-            realPath?.let { viewModel.videoList.add(File(it)) }
+            realPath?.let { viewModel.handleVideo(it) }
         }
     }
 

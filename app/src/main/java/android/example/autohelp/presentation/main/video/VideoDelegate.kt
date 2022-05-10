@@ -20,7 +20,7 @@ class VideoViewHolder(
         binding = ItemVideoBinding.bind(itemView)
         with(binding) {
             model as Video
-            tvFileName.setText(model.title)
+            tvFileName.text = model.title
             ivDelete.setOnClickListener { delete(model) }
         }
     }
